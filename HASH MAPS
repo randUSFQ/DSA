@@ -1,15 +1,16 @@
-1. Contexto
+## Contexto
 Los Hash Maps son estructuras de datos que permiten almacenar y recuperar valores asociados a claves de manera eficiente. Son ampliamente utilizados en situaciones donde se requiere una búsqueda rápida, como en tablas de símbolos, cachés y almacenamiento de datos clave-valor. Este laboratorio tiene como objetivo que los estudiantes comprendan el funcionamiento de un Hash Map, sus operaciones principales y cómo gestionar colisiones.
 
-2. Objetivo General
+## Objetivo General
 Desarrollar una comprensión profunda sobre la estructura de datos Hash Map, su implementación básica y su aplicación en problemas prácticos de búsqueda y almacenamiento de datos clave-valor.
 
-3. Objetivos Específicos
+## Objetivos Específicos
 Comprender los principios básicos detrás de las funciones hash y cómo se distribuyen las claves en un Hash Map.
 Implementar un Hash Map simple en Python, manejando colisiones mediante el uso de listas enlazadas.
 Aplicar el Hash Map en un contexto de problema real para almacenar y buscar información de manera eficiente.
 Evaluar el rendimiento del Hash Map comparándolo con otras estructuras de datos.
-4. Tareas a Realizar
+
+## Tareas a Realizar
 Tarea 1: Comprender el Funcionamiento de Hash Maps
 
 Investigar el concepto de hash y su importancia en la eficiencia de búsqueda.
