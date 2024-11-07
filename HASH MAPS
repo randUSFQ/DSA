@@ -1,0 +1,29 @@
+1. Contexto
+Los Hash Maps son estructuras de datos que permiten almacenar y recuperar valores asociados a claves de manera eficiente. Son ampliamente utilizados en situaciones donde se requiere una búsqueda rápida, como en tablas de símbolos, cachés y almacenamiento de datos clave-valor. Este laboratorio tiene como objetivo que los estudiantes comprendan el funcionamiento de un Hash Map, sus operaciones principales y cómo gestionar colisiones.
+
+2. Objetivo General
+Desarrollar una comprensión profunda sobre la estructura de datos Hash Map, su implementación básica y su aplicación en problemas prácticos de búsqueda y almacenamiento de datos clave-valor.
+
+3. Objetivos Específicos
+Comprender los principios básicos detrás de las funciones hash y cómo se distribuyen las claves en un Hash Map.
+Implementar un Hash Map simple en Python, manejando colisiones mediante el uso de listas enlazadas.
+Aplicar el Hash Map en un contexto de problema real para almacenar y buscar información de manera eficiente.
+Evaluar el rendimiento del Hash Map comparándolo con otras estructuras de datos.
+4. Tareas a Realizar
+Tarea 1: Comprender el Funcionamiento de Hash Maps
+
+Investigar el concepto de hash y su importancia en la eficiencia de búsqueda.
+Leer sobre estrategias de resolución de colisiones: encadenamiento y direccionamiento abierto.
+Tarea 2: Implementación de una Función Hash Simple
+
+Implementar una función hash básica que convierta una clave en un índice de arreglo.
+Probar la función con diferentes claves para observar la distribución de valores.
+Tarea 3: Implementación de Hash Map con Encadenamiento
+
+Crear una clase HashMap en Python que incluya los métodos put(key, value) y get(key).
+Utilizar una lista enlazada para manejar las colisiones en cada índice.
+Probar la clase HashMap con diferentes valores para asegurarse de que los valores con colisiones se almacenan y recuperan correctamente.
+Tarea 4: Pruebas de Uso del Hash Map
+
+Implementar un script que utilice el HashMap para almacenar nombres de estudiantes y sus puntajes.
+Realizar pruebas para verificar el tiempo de inserción y búsqueda en el Hash Map comparándolo con otras estructuras, como listas y diccionarios de Python.
