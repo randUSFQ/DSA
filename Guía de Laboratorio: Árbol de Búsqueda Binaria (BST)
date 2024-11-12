@@ -14,3 +14,15 @@ Tareas Detalladas y Código
 1. Configuración Inicial
 Objetivo: Configurar el entorno y crear las clases Node y BinarySearchTree.
 Código: No aplica, es solo la configuración inicial de clases.
+
+##Implementación del Nodo
+
+class Node {
+    int data;
+    Node left, right;
+
+    public Node(int item) {
+        data = item;
+        left = right = null;
+    }
+}
