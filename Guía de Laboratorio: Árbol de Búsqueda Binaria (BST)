@@ -15,7 +15,8 @@ Tareas Detalladas y Código
 Objetivo: Configurar el entorno y crear las clases Node y BinarySearchTree.
 Código: No aplica, es solo la configuración inicial de clases.
 
-##Implementación del Nodo
+2. Implementación de la Estructura del Nodo
+Clase Node:
 
 class Node {
     int data;
@@ -26,3 +27,8 @@ class Node {
         left = right = null;
     }
 }
+
+
+
+3. Creación de la Clase del Árbol de Búsqueda Binaria
+Clase BinarySearchTree:
