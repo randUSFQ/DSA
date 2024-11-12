@@ -32,3 +32,300 @@ class Node {
 
 3. Creación de la Clase del Árbol de Búsqueda Binaria
 Clase BinarySearchTree:
+class BinarySearchTree {
+    Node root;
+
+    public BinarySearchTree() {
+        root = null;
+    }
+}
+
+
+4. Implementación de Operaciones Básicas
+A. Inserción de Elementos
+
+void insert(int data) {
+    root = insertRec(root, data);
+}
+
+Node insertRec(Node root, int data) {
+    if (root == null) {
+        root = new Node(data);
+        return root;
+    }
+    if (data < root.data)
+        root.left = insertRec(root.left, data);
+    else if (data > root.data)
+        root.right = insertRec(root.right, data);
+    return root;
+}
+
+
+B. Búsqueda de Elementos
+
+boolean search(int data) {
+    return searchRec(root, data);
+}
+
+boolean searchRec(Node root, int data) {
+    if (root == null)
+        return false;
+    if (root.data == data)
+        return true;
+    return data < root.data ? searchRec(root.left, data) : searchRec(root.right, data);
+}
+
+
+C. Eliminación de Elementos
+
+void delete(int data) {
+    root = deleteRec(root, data);
+}
+
+Node deleteRec(Node root, int data) {
+    if (root == null) return root;
+
+    if (data < root.data)
+        root.left = deleteRec(root.left, data);
+    else if (data > root.data)
+        root.right = deleteRec(root.right, data);
+    else {
+        if (root.left == null) return root.right;
+        else if (root.right == null) return root.left;
+        root.data = minValue(root.right);
+        root.right = deleteRec(root.right, root.data);
+    }
+    return root;
+}
+
+int minValue(Node root) {
+    int minValue = root.data;
+    while (root.left != null) {
+        minValue = root.left.data;
+        root = root.left;
+    }
+    return minValue;
+}
+
+
+
+5. Recorridos del Árbol
+A. Recorrido Inorden
+
+void inorder() {
+    inorderRec(root);
+}
+
+void inorderRec(Node root) {
+    if (root != null) {
+        inorderRec(root.left);
+        System.out.print(root.data + " ");
+        inorderRec(root.right);
+    }
+}
+
+
+
+B. Recorrido Preorden
+
+void preorder() {
+    preorderRec(root);
+}
+
+void preorderRec(Node root) {
+    if (root != null) {
+        System.out.print(root.data + " ");
+        preorderRec(root.left);
+        preorderRec(root.right);
+    }
+}
+
+
+C. Recorrido Postorden
+
+void postorder() {
+    postorderRec(root);
+}
+
+void postorderRec(Node root) {
+    if (root != null) {
+        postorderRec(root.left);
+        postorderRec(root.right);
+        System.out.print(root.data + " ");
+    }
+}
+
+
+
+
+Aquí tienes la guía de laboratorio con el código necesario para resolver cada tarea en Java. Al final, incluyo el código completo para que tengas una referencia completa del Árbol de Búsqueda Binaria (BST) con todas las operaciones implementadas.
+
+Guía de Laboratorio: Árbol de Búsqueda Binaria (BST)
+
+Contexto
+El Árbol de Búsqueda Binaria (BST) es una estructura de datos fundamental en ciencias de la computación, utilizada para realizar búsquedas rápidas, inserciones, eliminaciones y otros tipos de consultas en datos ordenados. Este laboratorio guiará a los estudiantes en la implementación y manipulación de un BST, comprendiendo las operaciones básicas y cómo éstas afectan la estructura del árbol.
+
+Objetivo General
+Implementar y manipular un Árbol de Búsqueda Binaria (BST) en Java que permita realizar operaciones básicas de búsqueda, inserción, eliminación y recorrido del árbol, comprendiendo el impacto de cada operación en su estructura y balance.
+
+Objetivos Específicos
+Comprender los conceptos y propiedades de un BST y su estructura de nodos.
+Implementar las operaciones básicas de un BST, incluyendo inserción, búsqueda, eliminación y recorrido (preorden, inorden, postorden).
+Analizar y evaluar el rendimiento y comportamiento de cada operación en el BST.
+Tareas Detalladas y Código
+1. Configuración Inicial
+Objetivo: Configurar el entorno y crear las clases Node y BinarySearchTree.
+Código: No aplica, es solo la configuración inicial de clases.
+2. Implementación de la Estructura del Nodo
+Clase Node:
+
+java
+Copiar código
+class Node {
+    int data;
+    Node left, right;
+
+    public Node(int item) {
+        data = item;
+        left = right = null;
+    }
+}
+3. Creación de la Clase del Árbol de Búsqueda Binaria
+Clase BinarySearchTree:
+
+java
+Copiar código
+class BinarySearchTree {
+    Node root;
+
+    public BinarySearchTree() {
+        root = null;
+    }
+}
+4. Implementación de Operaciones Básicas
+A. Inserción de Elementos
+
+java
+Copiar código
+void insert(int data) {
+    root = insertRec(root, data);
+}
+
+Node insertRec(Node root, int data) {
+    if (root == null) {
+        root = new Node(data);
+        return root;
+    }
+    if (data < root.data)
+        root.left = insertRec(root.left, data);
+    else if (data > root.data)
+        root.right = insertRec(root.right, data);
+    return root;
+}
+B. Búsqueda de Elementos
+
+java
+Copiar código
+boolean search(int data) {
+    return searchRec(root, data);
+}
+
+boolean searchRec(Node root, int data) {
+    if (root == null)
+        return false;
+    if (root.data == data)
+        return true;
+    return data < root.data ? searchRec(root.left, data) : searchRec(root.right, data);
+}
+C. Eliminación de Elementos
+
+java
+Copiar código
+void delete(int data) {
+    root = deleteRec(root, data);
+}
+
+Node deleteRec(Node root, int data) {
+    if (root == null) return root;
+
+    if (data < root.data)
+        root.left = deleteRec(root.left, data);
+    else if (data > root.data)
+        root.right = deleteRec(root.right, data);
+    else {
+        if (root.left == null) return root.right;
+        else if (root.right == null) return root.left;
+        root.data = minValue(root.right);
+        root.right = deleteRec(root.right, root.data);
+    }
+    return root;
+}
+
+int minValue(Node root) {
+    int minValue = root.data;
+    while (root.left != null) {
+        minValue = root.left.data;
+        root = root.left;
+    }
+    return minValue;
+}
+5. Recorridos del Árbol
+A. Recorrido Inorden
+
+java
+Copiar código
+void inorder() {
+    inorderRec(root);
+}
+
+void inorderRec(Node root) {
+    if (root != null) {
+        inorderRec(root.left);
+        System.out.print(root.data + " ");
+        inorderRec(root.right);
+    }
+}
+B. Recorrido Preorden
+
+java
+Copiar código
+void preorder() {
+    preorderRec(root);
+}
+
+void preorderRec(Node root) {
+    if (root != null) {
+        System.out.print(root.data + " ");
+        preorderRec(root.left);
+        preorderRec(root.right);
+    }
+}
+C. Recorrido Postorden
+
+java
+Copiar código
+void postorder() {
+    postorderRec(root);
+}
+
+void postorderRec(Node root) {
+    if (root != null) {
+        postorderRec(root.left);
+        postorderRec(root.right);
+        System.out.print(root.data + " ");
+    }
+}
+
+
+6. Cálculo de la Altura del Árbol
+
+int height() {
+    return heightRec(root);
+}
+
+int heightRec(Node root) {
+    if (root == null) return 0;
+    int leftHeight = heightRec(root.left);
+    int rightHeight = heightRec(root.right);
+    return Math.max(leftHeight, rightHeight) + 1;
+}
