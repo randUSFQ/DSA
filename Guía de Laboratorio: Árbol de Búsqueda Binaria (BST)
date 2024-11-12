@@ -1,0 +1,16 @@
+Guía de Laboratorio: Árbol de Búsqueda Binaria (BST)
+
+Contexto
+El Árbol de Búsqueda Binaria (BST) es una estructura de datos fundamental en ciencias de la computación, utilizada para realizar búsquedas rápidas, inserciones, eliminaciones y otros tipos de consultas en datos ordenados. Este laboratorio guiará a los estudiantes en la implementación y manipulación de un BST, comprendiendo las operaciones básicas y cómo éstas afectan la estructura del árbol.
+
+Objetivo General
+Implementar y manipular un Árbol de Búsqueda Binaria (BST) en Java que permita realizar operaciones básicas de búsqueda, inserción, eliminación y recorrido del árbol, comprendiendo el impacto de cada operación en su estructura y balance.
+
+Objetivos Específicos
+Comprender los conceptos y propiedades de un BST y su estructura de nodos.
+Implementar las operaciones básicas de un BST, incluyendo inserción, búsqueda, eliminación y recorrido (preorden, inorden, postorden).
+Analizar y evaluar el rendimiento y comportamiento de cada operación en el BST.
+Tareas Detalladas y Código
+1. Configuración Inicial
+Objetivo: Configurar el entorno y crear las clases Node y BinarySearchTree.
+Código: No aplica, es solo la configuración inicial de clases.
